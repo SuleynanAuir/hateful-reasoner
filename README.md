@@ -41,7 +41,7 @@ The small reference files in `assets/` are retained. See [CLEANUP.md](CLEANUP.md
 
 ## Academic project page
 
-The English project page is in `index.html`, with local styles and scripts in `static/`. It follows the Academic Project Page Template and uses all supplied assets. The benchmark PDF is explicitly distinguished from the project manuscript excerpts; no unsupported project scores are reported.
+The English project page is in `index.html`, with local styles and scripts in `static/`. It follows the compact NEXUS4SCI-Mat project-page structure and uses all supplied assets, including university and laboratory logos. Li Minghao is highlighted as the primary contributor. The benchmark PDF is explicitly distinguished from the project manuscript excerpts; no unsupported project scores are reported.
 
 Preview from the repository root:
 
