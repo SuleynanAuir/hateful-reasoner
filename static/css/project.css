@@ -3,11 +3,11 @@
 
 /* Compact overview: a smaller illustration alongside the abstract. */
 .author-school{font-size:15px;color:#565656;margin:0 0 10px;letter-spacing:.5px}
-.overview.wide{width:min(1200px,calc(100% - 48px));display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;padding:24px 0 40px}
-.overview-figure{min-width:0;padding-top:4px}
+.overview.wide{width:min(1200px,calc(100% - 48px));display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:44px;align-items:start;padding:24px 0 40px}
+.overview-figure{min-width:0;width:100%;max-width:520px;padding-top:4px;justify-self:center}
 .overview-figure img{width:100%;height:auto;max-height:390px;object-fit:contain}
 .overview-figure figcaption{font-size:12px;line-height:1.6;margin-top:13px}
 .overview-figure .teaser-summary{font-size:14px;text-align:left;line-height:1.65;margin-top:17px}
 .overview-abstract h2{text-align:left;margin-bottom:17px}
 .overview-abstract p{font-size:16px;line-height:1.8;text-align:left;margin-bottom:0}
-@media(max-width:800px){.overview.wide{width:calc(100% - 32px);grid-template-columns:1fr;gap:28px;padding-top:10px}.overview-figure{max-width:540px;margin:auto}.overview-abstract h2{text-align:center}.overview-abstract p{font-size:16px}.overview-figure img{max-height:350px}}
+@media(max-width:600px){.overview.wide{width:calc(100% - 32px);grid-template-columns:1fr;gap:28px;padding-top:10px}.overview-figure{max-width:540px;margin:auto}.overview-abstract h2{text-align:center}.overview-abstract p{font-size:16px}.overview-figure img{max-height:350px}}
