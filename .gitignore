@@ -1,0 +1,39 @@
+# Local datasets (only instructions are versioned)
+/data/*
+!/data/README.md
+# Training artifacts and downloaded models
+wandb/
+lightning_logs/
+checkpoints*/
+models/
+weights/
+pretrained/
+outputs/
+*.pth
+*.pt
+*.bin
+*.ckpt
+*.safetensors
+*.onnx
+*.h5
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.joblib
+*.log
+*.zip
+*.tar
+*.gz
+# Local environments, caches and credentials
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+.vscode/
+.idea/
