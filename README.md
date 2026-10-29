@@ -38,3 +38,15 @@ Run the relevant entry point with `--help` for arguments. Existing training beha
 Removed: image datasets and CSV/JSON exports, pretrained weights, experiment outputs, caches, duplicate experimental entry points, machine-specific launcher scripts, and vendored OFA/LaMa/CLIP-captioning source trees. Preprocessing models and their environments must be obtained separately if regenerating image variants.
 
 The small reference files in `assets/` are retained. See [CLEANUP.md](CLEANUP.md) for the cleanup inventory.
+
+## Academic project page
+
+The English project page is in `index.html`, with local styles and scripts in `static/`. It follows the Academic Project Page Template and uses all supplied assets. The benchmark PDF is explicitly distinguished from the project manuscript excerpts; no unsupported project scores are reported.
+
+Preview from the repository root:
+
+```bash
+python3 -m http.server 8765
+```
+
+Open `http://localhost:8765`. For GitHub Pages, select the `main` branch and `/ (root)` folder in the repository's Pages settings. Hosting from a private repository depends on the account's GitHub Pages entitlement. The website adaptation is CC BY-SA 4.0; supplied research assets retain their respective rights.
