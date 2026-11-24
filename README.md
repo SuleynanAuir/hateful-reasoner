@@ -1,78 +1,180 @@
-# Hateful Reasoner: Detecting Hateful Memes via Presupposed Context Modeling and LLM-Guided Graph Reasoning
+# HateReasoner: Detecting Hateful Memes via Presupposed Context Modeling and LLM-Guided Graph Reasoning
 
-<div style="border-left: 4px solid #4CAF50; padding-left: 15px; background-color: #f7fcf7; padding: 10px; border-radius: 5px;">
-    <p style="margin: 0; font-size: 1.05em; color: #333;">
-        📞 Contact us here and welcome your coming !
-    </p>
-</div>
+<p align="center">
+  <strong>Minghao Li (Aiur), Yirui Liang (Loey), Qianqi Chen (Kiki)</strong>
+</p>
 
-<ul style="list-style-type: none; padding-left: 0; margin-top: 15px;">
-    <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-        <span style="color: #4CAF50; font-size: 1.2em;">👤</span> 
-        <strong>Name: Minghao Li (Aiur), Yirui Liang (Loey), Qianqi Chen (Kiki):</strong>
-    </li>
-    <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-        <span style="color: #4CAF50; font-size: 1.2em;">🏫</span> 
-        <strong>Affiliation:</strong> Beijing Normal - Hong Kong Baptist University (BNBU)
-    </li>
-    <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-        <span style="color: #4CAF50; font-size: 1.2em;">📧</span> 
-        <strong>Email:</strong> <code>t330034027@mail.bnbu.edu.cn, t330034030@mail.bnbu.edu.cn, t330034001@mail.bnbu.edu.cn</code>
-    </li>
-</ul>
+<p align="center">
+  Beijing Normal-Hong Kong Baptist University (BNBU)
+</p>
 
-<div align="left">
+<p align="center">
+  <a href="https://suleynanauir.github.io/hateful-reasoner/">
+    <img src="https://img.shields.io/badge/Project-Page-8A2BE2?style=for-the-badge" alt="Project Page">
+  </a>
   <a href="assets/HatefulReasoner.pdf">
-  <img src="https://img.shields.io/badge/📄%20Open-Paper%20Report-4c1" />
-</div>
+    <img src="https://img.shields.io/badge/Research-Paper-4CAF50?style=for-the-badge" alt="Research Paper">
+  </a>
+</p>
 
-CLIP-based hateful meme classification with multimodal fusion and optional LLM-guided reasoning. This repository contains source code; datasets, model weights, training logs and bundled third-party projects are excluded.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/PyTorch-Deep%20Learning-EE4C2C?logo=pytorch&logoColor=white">
+  <img src="https://img.shields.io/badge/CLIP-Multimodal%20Learning-purple">
+  <img src="https://img.shields.io/badge/LLM-Semantic%20Reasoning-green">
+  <img src="https://img.shields.io/badge/GNN-Graph%20Reasoning-orange">
+</p>
 
-## Setup
+> Beyond Image–Text Alignment: Understanding Implicit Hate through Contextual and Multimodal Reasoning.
 
-Use Python 3.11 and install a PyTorch build appropriate for your GPU, then:
+<p align="center">
+  <img src="assets/hateful_meme.png" alt="Hateful Meme Detection" width="800">
+</p>
+
+---
+
+## 📖 1. Overview
+
+Hateful memes often convey implicit harmful meanings through the interaction between seemingly innocuous images and text. Such meanings may involve sarcasm, stereotypes, misleading claims, and implicit accusations, making them difficult to detect through conventional unimodal classification or superficial image–text alignment.
+
+**HateReasoner** is a CLIP-based multimodal hateful meme detection framework that integrates presupposed context modeling, LLM-guided semantic reasoning, and graph-based multimodal learning.
+
+The framework captures both global contextual dependencies and fine-grained cross-modal relationships for context-aware hateful meme classification.
+
+---
+
+## 🧩 2. Framework & Key Contributions
+
+| Component | Description |
+| :--- | :--- |
+| **Image Preprocessing** | Integrates OCR, EAST text detection, and Big-LaMa image inpainting to reduce textual interference and reconstruct visual context. |
+| **CLIP-Based Encoding** | Extracts global image–text embeddings and local patch–token representations within a shared semantic space. |
+| **Presupposed Context Module (PCM)** | Models global image–text interactions through modality-specific transformations and element-wise feature multiplication. |
+| **Semantic Guidance Module (SGM)** | Introduces LLM-derived semantic priors to emphasize relevant visual and linguistic cues. |
+| **Graph-based Multimodal Module (GMM)** | Constructs multimodal graphs connecting image patches and text tokens for relational reasoning through GNNs. |
+| **Semantic-Context Fusion Module (SCFM)** | Integrates semantic guidance and graph-based reasoning with global contextual features for final classification. |
+
+### Core Workflow
+
+```text
+Image & Text Input
+        ↓
+OCR · Text Masking · Big-LaMa Inpainting
+        ↓
+CLIP-Based Multimodal Encoding
+        ↓
+PCM + SCFM (SGM + GMM)
+        ↓
+Multimodal Feature Fusion
+        ↓
+Hateful / Non-Hateful Classification
+```
+
+---
+
+## 📊 3. Experimental Results
+
+The research manuscript reports an evaluation on the **Hateful Memes Challenge (HMC)** dataset using Accuracy and AUROC as the primary evaluation metrics.
+
+| Model | Accuracy (%) ↑ | AUROC (%) ↑ |
+| :--- | ---: | ---: |
+| Human Annotators | 84.70 | 82.65 |
+| Image-grid | 52.00 | 52.63 |
+| Image-region | 52.13 | 55.92 |
+| Text BERT | 59.20 | 65.08 |
+| Late Fusion | 59.66 | 64.75 |
+| Concat BERT | 59.13 | 65.79 |
+| MMBT-grid | 60.06 | 67.92 |
+| MMBT-region | 60.23 | 70.73 |
+| ViLBERT CC | 61.10 | 70.03 |
+| Visual BERT COCO | 64.73 | 71.41 |
+| GPT-4o mini | 69.50 | 75.02 |
+| **HateReasoner (Ours)** | **73.40** | **77.99** |
+
+HateReasoner achieves a reported **73.40% Accuracy** and **77.99% AUROC**, outperforming the automated baselines listed in the manuscript.
+
+Compared with GPT-4o mini:
+
+- **Accuracy:** +3.90 percentage points
+- **AUROC:** +2.97 percentage points
+
+For detailed methodology and experimental configurations, please refer to the [Research Paper](assets/HatefulReasoner.pdf).
+
+---
+
+## 💻 4. Installation & Data Preparation
+
+### Environment Setup
+
+Use Python 3.11 and install a PyTorch build compatible with your CUDA GPU.
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-The dependency list is reduced from the original machine-specific Conda export. Full training has not been revalidated in a fresh environment. Training currently assumes a CUDA GPU.
+### Dataset Preparation
 
-## Data
+Prepare the Hateful Memes Challenge dataset following [data/README.md](data/README.md).
 
-Prepare your own dataset following [data/README.md](data/README.md). Images, labels and checkpoints are not distributed in this repository. The retained metadata notebooks in `data_preprocess/` are reference helpers; update their local paths before use.
+The preprocessing pipeline supports original, masked, and inpainted image variants. Reference notebooks are available in `data_preprocess/`.
 
-## Training entry points
+### API Configuration
 
-- `new_main_enhanced.py` / `new_engine_enhanced.py`: enhanced multimodal reasoning pipeline.
-- `new_main_LLM.py` / `new_engine_LLM.py`: LLM variant, using `datasets_new.py`.
-- `main.py` / `engine.py`: original classification baseline, using `datasets.py`.
-- `pretraining/`: representation pretraining and projection extraction.
-
-For LLM-backed pipelines, set `OPENAI_API_KEY` in your shell. Set `OPENAI_BASE_URL` only when using an alternative OpenAI-compatible provider. Credentials must not be committed. These pipelines may send inputs to the configured API and incur API costs.
-
-After preparing data and API configuration:
+For LLM-backed pipelines:
 
 ```bash
-python new_main_enhanced.py --dataset inpainted --labels original --batch_size 16 --max_epochs 1 --wandb_mode offline
+export OPENAI_API_KEY="YOUR_API_KEY"
 ```
 
-Run the relevant entry point with `--help` for arguments. Existing training behavior is retained: the enhanced pipeline validates on both eval and test splits, and some CLI logging/checkpoint options are not wired into its Trainer. Review this before using results for evaluation.
-
-## Repository scope
-
-Removed: image datasets and CSV/JSON exports, pretrained weights, experiment outputs, caches, duplicate experimental entry points, machine-specific launcher scripts, and vendored OFA/LaMa/CLIP-captioning source trees. Preprocessing models and their environments must be obtained separately if regenerating image variants.
-
-The small reference files in `assets/` are retained. See [CLEANUP.md](CLEANUP.md) for the cleanup inventory.
-
-## Academic project page
-
-The English project page is in `index.html`, with local styles and scripts in `static/`. It follows the compact NEXUS4SCI-Mat project-page structure and uses all supplied assets, including university and laboratory logos. Li Minghao is highlighted as the primary contributor. The benchmark PDF is explicitly distinguished from the project manuscript excerpts; no unsupported project scores are reported.
-
-Preview from the repository root:
+When using an alternative OpenAI-compatible provider:
 
 ```bash
-python3 -m http.server 8765
+export OPENAI_BASE_URL="YOUR_API_BASE_URL"
 ```
 
-Open `http://localhost:8765`. For GitHub Pages, select the `main` branch and `/ (root)` folder in the repository's Pages settings. Hosting from a private repository depends on the account's GitHub Pages entitlement. The website adaptation is CC BY-SA 4.0; supplied research assets retain their respective rights.
+Do not commit API credentials to the repository. API-based pipelines may transmit inputs to the configured provider and incur usage costs.
+
+---
+
+## 🚀 5. Training
+
+### Training Entry Points
+
+| File | Description |
+| :--- | :--- |
+| `new_main_enhanced.py` / `new_engine_enhanced.py` | Enhanced multimodal reasoning pipeline |
+| `new_main_LLM.py` / `new_engine_LLM.py` | LLM-guided model variant |
+| `main.py` / `engine.py` | Original classification baseline |
+| `pretraining/` | Representation pretraining and projection extraction |
+
+### Quick Start
+
+```bash
+python new_main_enhanced.py \
+    --dataset inpainted \
+    --labels original \
+    --batch_size 16 \
+    --max_epochs 1 \
+    --wandb_mode offline
+```
+
+For additional training arguments:
+
+```bash
+python new_main_enhanced.py --help
+```
+
+### Implementation Notes
+
+- Datasets, pretrained weights, checkpoints, and training logs are not included in this repository.
+- The enhanced implementation obtains semantic priors through a text-embedding API, rather than reproducing every prompt-based operation described in the manuscript.
+- Full training has not been revalidated in a fresh environment.
+- The enhanced pipeline currently evaluates both evaluation and test splits during training. Some logging and checkpoint options are not connected to the Trainer. Independent test evaluation is recommended for rigorous benchmarking.
+
+---
+
+## 🙏 Acknowledgements
+
+This project builds upon CLIP, EAST, Big-LaMa, Hate-CLIPper, and the Hateful Memes Challenge benchmark.
+
+The academic project page follows the NEXUS4SCI-Mat project-page structure and the Academic Project Page Template. The website adaptation is licensed under CC BY-SA 4.0; third-party research assets retain their respective rights.
