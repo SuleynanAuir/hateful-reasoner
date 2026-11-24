@@ -1,5 +1,20 @@
 # Hateful Reasoner
 
+<ul style="list-style-type: none; padding-left: 0; margin-top: 15px;">
+    <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+        <span style="color: #4CAF50; font-size: 1.2em;">👤</span> 
+        <strong>Name:</strong> Minghao Li (Aiur), Yirui Liang (Loey)
+    </li>
+    <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+        <span style="color: #4CAF50; font-size: 1.2em;">🏫</span> 
+        <strong>Affiliation:</strong> Beijing Normal - Hong Kong Baptist University (BNBU)
+    </li>
+    <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+        <span style="color: #4CAF50; font-size: 1.2em;">📧</span> 
+        <strong>Email:</strong> <code>t330034027@mail.uic.edu.cn, laybaeknim@gmail.com</code>
+    </li>
+</ul>
+
 CLIP-based hateful meme classification with multimodal fusion and optional LLM-guided reasoning. This repository contains source code; datasets, model weights, training logs and bundled third-party projects are excluded.
 
 ## Setup
