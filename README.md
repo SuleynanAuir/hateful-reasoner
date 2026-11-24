@@ -20,7 +20,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white">
   <img src="https://img.shields.io/badge/PyTorch-Deep%20Learning-EE4C2C?logo=pytorch&logoColor=white">
-  <img src="https://img.shields.io/badge/CLIP-Multimodal%20Learning-purple">
+  <img src="https://img.shields.io/badge/CLIP-Vision%20Language-purple">
   <img src="https://img.shields.io/badge/LLM-Semantic%20Reasoning-green">
   <img src="https://img.shields.io/badge/GNN-Graph%20Reasoning-orange">
 </p>
