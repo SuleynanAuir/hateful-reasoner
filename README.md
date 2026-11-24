@@ -1,14 +1,6 @@
 # HateReasoner: Detecting Hateful Memes via Presupposed Context Modeling and LLM-Guided Graph Reasoning
 
 <p align="center">
-  <strong>Minghao Li (Aiur), Yirui Liang (Loey), Qianqi Chen (Kiki)</strong>
-</p>
-
-<p align="center">
-  Beijing Normal-Hong Kong Baptist University (BNBU)
-</p>
-
-<p align="center">
   <a href="https://suleynanauir.github.io/hateful-reasoner/">
     <img src="https://img.shields.io/badge/Project-Page-8A2BE2?style=for-the-badge" alt="Project Page">
   </a>
@@ -24,6 +16,21 @@
   <img src="https://img.shields.io/badge/LLM-Semantic%20Reasoning-green">
   <img src="https://img.shields.io/badge/GNN-Graph%20Reasoning-orange">
 </p>
+
+<ul style="list-style-type: none; padding-left: 0; margin-top: 15px;">
+    <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+        <span style="color: #4CAF50; font-size: 1.2em;">👤</span> 
+        <strong>Name: Minghao Li (Aiur), Yirui Liang (Loey), Qianqi Chen (Kiki) </strong>
+    </li>
+    <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+        <span style="color: #4CAF50; font-size: 1.2em;">🏫</span> 
+        <strong>Affiliation:</strong> Beijing Normal- Hong Kong Baptist University (BNBU)
+    </li>
+    <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+        <span style="color: #4CAF50; font-size: 1.2em;">📧</span> 
+        <strong>Email:</strong> <code>t330034027@mail.bnbu.edu.cn, t330034030@mail.bnbu.edu.cn, t330034001@mail.bnbu.edu.cn</code>
+    </li>
+</ul>
 
 > **Beyond Image–Text Alignment: Understanding Implicit Hate through Contextual and Multimodal Reasoning.**
 
