@@ -25,12 +25,11 @@
   <img src="https://img.shields.io/badge/GNN-Graph%20Reasoning-orange">
 </p>
 
-> Beyond Image–Text Alignment: Understanding Implicit Hate through Contextual and Multimodal Reasoning.
+> **Beyond Image–Text Alignment: Understanding Implicit Hate through Contextual and Multimodal Reasoning.**
 
 <p align="center">
-  <img src="assets/hateful_meme.png" alt="Hateful Meme Detection" width="800">
+  <img src="assets/hateful_meme.png" alt="Multimodal Hateful Meme Detection" width="800">
 </p>
-
 ---
 
 ## 📖 1. Overview
