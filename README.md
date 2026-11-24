@@ -21,6 +21,11 @@
     </li>
 </ul>
 
+<div align="left">
+  <a href="assets/HatefulReasoner.pdf">
+  <img src="https://img.shields.io/badge/📄%20Open-Paper%20Report-4c1" />
+</div>
+
 CLIP-based hateful meme classification with multimodal fusion and optional LLM-guided reasoning. This repository contains source code; datasets, model weights, training logs and bundled third-party projects are excluded.
 
 ## Setup
