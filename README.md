@@ -30,7 +30,7 @@
 <p align="center">
   <img src="assets/hateful_meme.png" alt="Multimodal Hateful Meme Detection" width="800">
 </p>
----
+
 
 ## 📖 1. Overview
 
