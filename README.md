@@ -1,5 +1,11 @@
 # Hateful Reasoner
 
+<div style="border-left: 4px solid #4CAF50; padding-left: 15px; background-color: #f7fcf7; padding: 10px; border-radius: 5px;">
+    <p style="margin: 0; font-size: 1.05em; color: #333;">
+        📞 Contact us here and welcome your coming !
+    </p>
+</div>
+
 <ul style="list-style-type: none; padding-left: 0; margin-top: 15px;">
     <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
         <span style="color: #4CAF50; font-size: 1.2em;">👤</span> 
