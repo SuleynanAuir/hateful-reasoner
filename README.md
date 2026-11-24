@@ -51,6 +51,16 @@ The framework captures both global contextual dependencies and fine-grained cros
 
 ## 🧩 2. Framework & Key Contributions
 
+<p align="center">
+  <img src="assets/hateful_pipeline.png"
+       alt="HateReasoner Framework Architecture"
+       width="1000">
+</p>
+
+<p align="center">
+  <em>Figure 1. Overview of the proposed HateReasoner framework.</em>
+</p>
+
 | Component | Description |
 | :--- | :--- |
 | **Image Preprocessing** | Integrates OCR, EAST text detection, and Big-LaMa image inpainting to reduce textual interference and reconstruct visual context. |
@@ -60,22 +70,7 @@ The framework captures both global contextual dependencies and fine-grained cros
 | **Graph-based Multimodal Module (GMM)** | Constructs multimodal graphs connecting image patches and text tokens for relational reasoning through GNNs. |
 | **Semantic-Context Fusion Module (SCFM)** | Integrates semantic guidance and graph-based reasoning with global contextual features for final classification. |
 
-### Core Workflow
-
-```text
-Image & Text Input
-        ↓
-OCR · Text Masking · Big-LaMa Inpainting
-        ↓
-CLIP-Based Multimodal Encoding
-        ↓
-PCM + SCFM (SGM + GMM)
-        ↓
-Multimodal Feature Fusion
-        ↓
-Hateful / Non-Hateful Classification
-```
-
+---
 ---
 
 ## 📊 3. Experimental Results
