@@ -1,4 +1,4 @@
-# Hateful Reasoner
+# Hateful Reasoner: Detecting Hateful Memes via Presupposed Context Modeling and LLM-Guided Graph Reasoning
 
 <div style="border-left: 4px solid #4CAF50; padding-left: 15px; background-color: #f7fcf7; padding: 10px; border-radius: 5px;">
     <p style="margin: 0; font-size: 1.05em; color: #333;">
